@@ -1,0 +1,10 @@
+composetestweb:
+  build: .
+  ports:
+    - "6060:8080"
+  volumes:
+    - .:/go/src/github.com/glevine/composetest
+  links:
+    - composetestneo4j
+composetestneo4j:
+  image: tpires/neo4j
